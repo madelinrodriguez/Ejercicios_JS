@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Función para validar si un valor es un número
+function esNumero(valor) {
+    return !isNaN(parseFloat(valor)) && isFinite(valor);
+}
+
+// Pedir al usuario que introduzca el primer número
+var numero1 = prompt("Por favor, introduce el primer número:");
+while (!esNumero(numero1)) {
+    numero1 = prompt("Por favor, introduce un número válido para el primer número:");
+}
+
+// Pedir al usuario que introduzca el segundo número
+var numero2 = prompt("Por favor, introduce el segundo número:");
+while (!esNumero(numero2)) {
+    numero2 = prompt("Por favor, introduce un número válido para el segundo número:");
+}
+
+// Pedir al usuario que introduzca la operación
+var operacion = prompt("Por favor, introduce la operación a realizar (+, -, *, /):");
+
+// Validar la operación y realizar el cálculo
+var resultado;
+switch (operacion) {
+    case "+":
+        resultado = parseFloat(numero1) + parseFloat(numero2);
+        break;
+    case "-":
+        resultado = parseFloat(numero1) - parseFloat(numero2);
+        break;
+    case "*":
+        resultado = parseFloat(numero1) * parseFloat(numero2);
+        break;
+    case "/":
+        resultado = parseFloat(numero1) / parseFloat(numero2);
+        break;
+    default:
+        resultado = "Operación incorrecta";
+}
+
+// Mostrar el resultado en una alerta
+alert("El resultado de la operación es: " + resultado);
+
+    </script>
+    
+</body>
+</html>

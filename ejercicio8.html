@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  // Pedir al usuario que introduzca el primer número
+var numero1 = prompt("Por favor, introduce el primer número:");
+
+// Validar si el primer valor introducido es un número
+while (isNaN(numero1)) {
+    numero1 = prompt("Por favor, introduce un número válido para el primer número:");
+}
+
+// Pedir al usuario que introduzca el segundo número
+var numero2 = prompt("Por favor, introduce el segundo número:");
+
+// Validar si el segundo valor introducido es un número
+while (isNaN(numero2)) {
+    numero2 = prompt("Por favor, introduce un número válido para el segundo número:");
+}
+
+// Comparar los números e indicar cuál es mayor o si son iguales
+if (parseFloat(numero1) > parseFloat(numero2)) {
+    alert("El primer número es mayor que el segundo número.");
+} else if (parseFloat(numero1) < parseFloat(numero2)) {
+    alert("El segundo número es mayor que el primer número.");
+} else {
+    alert("Los dos números son iguales.");
+}
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  // Función para validar si un valor es un número
+function esNumero(valor) {
+    return !isNaN(parseFloat(valor)) && isFinite(valor);
+}
+
+// Pedir al usuario que introduzca el primer número
+var numero1 = prompt("Por favor, introduce el primer número:");
+
+// Validar si el primer valor introducido es un número
+while (!esNumero(numero1)) {
+    numero1 = prompt("Por favor, introduce un número válido para el primer número:");
+}
+
+// Pedir al usuario que introduzca el segundo número
+var numero2 = prompt("Por favor, introduce el segundo número:");
+
+// Validar si el segundo valor introducido es un número
+while (!esNumero(numero2)) {
+    numero2 = prompt("Por favor, introduce un número válido para el segundo número:");
+}
+
+// Convertir los valores introducidos a números
+numero1 = parseFloat(numero1);
+numero2 = parseFloat(numero2);
+
+// Calcular la suma de los dos números
+var suma = numero1 + numero2;
+
+// Mostrar la suma en una alerta
+alert("La suma de los dos números es: " + suma);
+
+    </script>
+    
+</body>
+</html>

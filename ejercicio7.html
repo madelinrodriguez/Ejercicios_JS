@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,52 +9,40 @@
 </head>
 <body>
     <script>
-  // Función para validar si un valor es un número
-function esNumero(valor) {
-    return !isNaN(parseFloat(valor)) && isFinite(valor);
+        // Declarar variables para las notas y la suma
+var nota1, nota2, nota3, suma, promedio;
+
+// Pedir la primera nota al usuario y validar que sea un número válido
+do {
+    nota1 = prompt("Ingresa la primera nota:");
+} while (isNaN(nota1));
+
+// Pedir la segunda nota al usuario y validar que sea un número válido
+do {
+    nota2 = prompt("Ingresa la segunda nota:");
+} while (isNaN(nota2));
+
+// Pedir la tercera nota al usuario y validar que sea un número válido
+do {
+    nota3 = prompt("Ingresa la tercera nota:");
+} while (isNaN(nota3));
+
+// Calcular la suma de las notas
+suma = parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3);
+
+// Calcular el promedio
+promedio = suma / 3;
+
+// Determinar si el estudiante está aprobado o reprobado
+var estado;
+if (promedio >= 3) {
+    estado = "Aprobado";
+} else {
+    estado = "Reprobado";
 }
 
-// Función para calcular la media de las notas
-function calcularMedia(notas) {
-    var suma = 0;
-    for (var i = 0; i < notas.length; i++) {
-        suma += parseFloat(notas[i]);
-    }
-    return suma / notas.length;
-}
-
-// Función para determinar si un estudiante está aprobado o reprobado
-function evaluarEstado(media) {
-    if (media >= 3) {
-        return "Aprobado";
-    } else {
-        return "Reprobado";
-    }
-}
-
-// Array para almacenar las notas
-var notas = [];
-
-// Pedir al usuario que introduzca las notas
-for (var i = 0; i < 3; i++) {
-    var nota = prompt("Por favor, introduce la nota del estudiante " + (i + 1) + ":");
-    // Validar si la nota es un número
-    while (!esNumero(nota)) {
-        nota = prompt("Por favor, introduce una nota válida para el estudiante " + (i + 1) + ":");
-    }
-    // Almacenar la nota en el array
-    notas.push(parseFloat(nota));
-}
-
-// Calcular la media de las notas
-var media = calcularMedia(notas);
-
-// Determinar si los estudiantes están aprobados o reprobados
-var estado = evaluarEstado(media);
-
-// Mostrar el resultado en una alerta
-alert("La nota media de los estudiantes es: " + media.toFixed(2) + "\nEstado: " + estado);
-
+// Mostrar el promedio y el estado en un alert
+alert("El promedio de las notas es: " + promedio.toFixed(2) + "\nEstado: " + estado);
     </script>
     
 </body>

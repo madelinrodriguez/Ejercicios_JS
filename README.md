@@ -1,4 +1,5 @@
 # Ejercicios_JS
+
 1. Mostrar por consola la tabla de multiplicar del 5 utilizando la sentencia for de la siguiente manera:
 5 x 0 = 0
 5 x 1 = 5
